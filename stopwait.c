@@ -33,3 +33,22 @@ void sender(int totalFrames)
 void receiver(int frame){
         printf("Receiver:Frame %d received. Sending ACK %d...\n",frame,frame);
 }
+o/p:
+===Stop-and-Wait Protocol Simulation ===
+Enter total number of frames to send: 3
+Sender: Sending Frame 1
+Receiver: Do you want to ACK Frame 1? (1=yes, 0=No): 1
+Receiver: Frame 1 received. Sending ACK 1...
+Sender: ACK 1 Received
+Sender: Sending Frame 2
+Receiver: Do you want to ACK Frame 2? (1=yes, 0=No): 1
+Receiver: Frame 2 received. Sending ACK 2...
+Sender: ACK 2 Received
+Sender: Sending Frame 3
+Receiver: Do you want to ACK Frame 3? (1=yes, 0=No): 0
+Sender: ACK 3 lost. Retransmitting...
+Sender: Sending Frame 3
+Receiver: Do you want to ACK Frame 3? (1=yes, 0=No): 1
+Receiver: Frame 3 received. Sending ACK 3...
+Sender: ACK 3 Received
+All 3 frames sent successfully!
